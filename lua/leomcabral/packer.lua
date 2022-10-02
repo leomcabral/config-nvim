@@ -11,14 +11,26 @@ end
 
 local packer_bootstrap = ensure_packer()
 
+-- Autocmd that reloads neovim whenever you save this file
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost packer.lua source <afile> | PackerSync
+  augroup end
+]])
+
 return require("packer").startup(function()
 
     -- packer package manager
     use 'wbthomason/packer.nvim'
 
+    use "nvim-lua/plenary.nvim"
+    use "folke/which-key.nvim"
+
     -- Configurations for Nvim LSP
     use 'neovim/nvim-lspconfig'
 
+    use "nvim-telescope/telescope.nvim"
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
