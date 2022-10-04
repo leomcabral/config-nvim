@@ -4,7 +4,7 @@ local options = {
   fileencoding = "utf-8",
   hlsearch = true,
   ignorecase = true,
-  showmode = true,
+  showmode = false,
 
   backup = false,
   swapfile = false,

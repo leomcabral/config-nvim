@@ -24,6 +24,14 @@ return require("packer").startup(function()
     -- packer package manager
     use 'wbthomason/packer.nvim'
 
+    -- Nord theme
+    use 'shaunsingh/nord.nvim'
+
+    use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
+
     use "nvim-lua/plenary.nvim"
     use "folke/which-key.nvim"
 
