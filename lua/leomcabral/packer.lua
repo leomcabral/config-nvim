@@ -32,6 +32,8 @@ return require("packer").startup(function()
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
+    use 'nvim-treesitter/nvim-treesitter'
+
     use "nvim-lua/plenary.nvim"
     use "folke/which-key.nvim"
 
